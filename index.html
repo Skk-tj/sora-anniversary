@@ -19,19 +19,40 @@
 
 <body>
     <div class="bg-container">
-        <div class="bg-image"></div>
+        <div class="bg"></div>
     </div>
 
-    <div class="start-page-container full-screen-page">
+    <header class="start-page full-screen-page">
         <h1 class="start-msg" data-aos="zoom-in">
-            Happy Anniversary!
+            Happy Anniversary! (Let's have some initial animations here!)
         </h1>
         <div class="button-controls" data-aos="zoom-in">
             <button>Test</button>
         </div>
-    </div>
+    </header>
 
-    <div class="birthday-msgs-container">
+    <section class="drawpile-sect">
+        <div class="section-title" data-aos="fade-in">
+            <h2>Drawpile image</h2>
+        </div>
+        <div class="drawpile-image-container" data-aos="fade-in">
+            <img id="drawpile-image" src="img/placeholder.png" alt="">
+        </div>
+    </section>
+
+    <section class="audio-mix-sect">
+        <div class="section-title" data-aos="fade-in">
+            <h2>Cover Mix</h2>
+        </div>
+        <p>
+            Lets put the audio player here?
+        </p>
+    </section>
+
+    <section class="birthday-msgs">
+        <div class="section-title" data-aos="fade-in">
+            <h2>Messages</h2>
+        </div>
         <div class="card-columns">
             <div class="birthday-msg-card-container" data-aos="fade-in">
                 <div class="birthday-msg-card card card-default">
@@ -231,13 +252,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="end-page-container full-screen-page">
+    <section class="end-page full-screen-page">
         <h1 class="cover-msg" data-aos="zoom-in">
             Last message to leave
         </h1>
-    </div>
+    </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
