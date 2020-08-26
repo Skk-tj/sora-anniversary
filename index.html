@@ -13,13 +13,16 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+        integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw=="
+        crossorigin="anonymous" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <div class="bg-container">
-        <div class="bg"></div>
+        <div id="particles-js"></div>
     </div>
 
     <header class="start-page full-screen-page">
@@ -58,15 +61,20 @@
                 <div class="birthday-msg-card card card-default">
                     <div class="sender-details">
                         <div class="country">
-                            flag here - Japan
-                        </div>
-                        <div class="sender">
-                            Anonymous
+                            <cite class="text-muted">From</cite> <span class="flag-icon flag-icon-us"></span>
                         </div>
                     </div>
                     <div class="birthday-msg">
-                        <p>Heyo, this is a long message, testing testintesg</p>
-                        <p>これは長いメッセージです</p>
+                        <small class="text-muted">EN</small>
+                        <blockquote class="blockquote mb-0">
+                            <p>Heyo, this is a long message, testing testintesg</p>
+                        </blockquote>
+                        <hr>
+                        <small class="text-muted">JP</small>
+                        <blockquote class="blockquote mb-0">
+                            <p>これは長いメッセージです</p>
+                            <footer class="blockquote-footer">Sender here (@Twitter handle here)</footer>
+                        </blockquote>
                     </div>
                 </div>
             </div>
@@ -75,7 +83,7 @@
                 <div class="birthday-msg-card card card-default">
                     <div class="sender-details">
                         <div class="country">
-                            flag here - Japan
+                            <span class="flag-icon flag-icon-ca"></span>
                         </div>
                         <div class="sender">
                             Anonymous
@@ -101,7 +109,7 @@
                 <div class="birthday-msg-card card card-default">
                     <div class="sender-details">
                         <div class="country">
-                            flag here - Japan
+                            <span class="flag-icon flag-icon-us"></span>
                         </div>
                         <div class="sender">
                             Anonymous
@@ -261,6 +269,7 @@
     </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         AOS.init({
             offset: 120,
@@ -270,6 +279,117 @@
             once: false,
             anchorPlacement: 'top-center'
         });
+
+        particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 160,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 1,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 4,
+                            "size_min": 0.3,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": false,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 600
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "bubble"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 250,
+                            "size": 0,
+                            "duration": 2,
+                            "opacity": 0,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 400,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
     </script>
 </body>
 
