@@ -81,6 +81,14 @@
     object-fit: cover;
 }
 
+#audio-mix-sect {
+    margin: 20px;
+}
+
+#audio-mix-player-container {
+    padding: 5px;
+}
+
 #birthday-msgs {
     margin: 20px;
 }
