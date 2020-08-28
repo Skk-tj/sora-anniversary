@@ -1,0 +1,17 @@
+{
+  "name": "sora-anniversary",
+  "version": "1.0.0",
+  "description": "Webpage for Sora's 3rd Anniversary",
+  "scripts": {
+    "start": "node compile_index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skk-tj/sora-anniversary.git"
+  },
+  "dependencies": {
+    "country-code-lookup": "0.0.17",
+    "csv-parse": "^4.12.0",
+    "handlebars": "^4.7.6"
+  }
+}
