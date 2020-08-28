@@ -107,6 +107,14 @@
     padding: 10px;
 }
 
+blockquote:lang(ja) > p {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+blockquote > p {
+    font-family: 'Architects Daughter', cursive;
+}
+
 #end-page {
     display: flex;
     justify-content: center;
