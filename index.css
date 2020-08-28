@@ -38,27 +38,6 @@
     flex-direction: column;
 }
 
-#test-stroke-one {
-    animation: test-one 1s ease-in-out forwards;
-}
-
-@keyframes test-one {
-    to {
-      stroke-dashoffset: 0;
-    }
-}
-
-#test-stroke-two {
-    animation: test-two 0.5s ease-in-out forwards;
-    animation-delay: 1s;
-}
-
-@keyframes test-two {
-    to {
-      stroke-dashoffset: 0;
-    }
-}
-
 #scroll-arrow-hint {
     position: absolute;
     bottom: 15vh;
@@ -94,6 +73,12 @@
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+@keyframes pathAnimation {
+    to {
+      stroke-dashoffset: 0;
     }
 }
 
