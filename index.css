@@ -38,6 +38,24 @@
     flex-direction: column;
 }
 
+h1 {
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+}
+
+h1:lang(ja) {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+h4 {
+    font-family: 'Patrick Hand', cursive;
+}
+
+svg {
+    width: 50vw;
+    height: 50vh;
+}
+
 #scroll-arrow-hint {
     position: absolute;
     bottom: 15vh;
@@ -131,17 +149,32 @@ img#ankimo-img {
     .card-columns {
         column-count: 1;
     }
+
+    svg {
+        width: 90vw;
+        height: 50vh;
+    }
 }
 
 @media (min-width: 700px) {
     .card-columns {
         column-count: 2;
     }
+
+    svg {
+        width: 80vw;
+        height: 50vh;
+    }
 }
 
 @media (min-width: 1000px) {
     .card-columns {
         column-count: 3;
+    }
+
+    svg {
+        width: 70vw;
+        height: 50vh;
     }
 }
 
