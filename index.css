@@ -105,6 +105,7 @@
 
 .birthday-msg-card {
     padding: 10px;
+    box-shadow: 5px 0px 20px -5px rgba(0,0,0,0.75);
 }
 
 blockquote:lang(ja) > p {
@@ -120,4 +121,8 @@ blockquote > p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+img#ankimo-img {
+    float: right;
 }

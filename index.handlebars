@@ -501,11 +501,16 @@
             <div class="birthday-msg-card-container" data-aos="fade-in">
                 <div class="birthday-msg-card card card-default">
                     <div class="sender-details">
-                        {{#with country_code}}
                         <div class="country">
-                            <cite class="text-muted">From </cite> <span class="flag-icon flag-icon-{{this}}"></span>
+                            <cite class="text-muted">From {{username}}</cite>
+                            {{#with twitter}}
+                                <cite class="text-muted">(@{{this}})</cite>
+                            {{/with}}
+                            {{#with country_code}}
+                                <span class="flag-icon flag-icon-{{this}}"></span>
+                            {{/with}}
+                            <img id="ankimo-img" src="img/sddefault_live.png" width="10%" height="10%"></img>
                         </div>
-                        {{/with}}
                     </div>
                     <div class="birthday-msg">
                         <blockquote class="blockquote mb-0">
@@ -517,14 +522,6 @@
                             <p>{{this}}</p>
                         </blockquote>
                         {{/with}}
-                        <blockquote class="blockquote mb-0">
-                            <footer class="blockquote-footer">
-                                <span>{{username}}</span>
-                                {{#with twitter}}
-                                <span>(@{{this}})</span>
-                                {{/with}}
-                            </footer>
-                        </blockquote>
                     </div>
                 </div>
             </div>
@@ -676,8 +673,10 @@
         }
 
         function animatePath(el, delay) {
-            el.style.animation = `pathAnimation 0.1s ease-in-out forwards`;
+            el.style["animation"] = 'pathAnimation 0.1s ease-in-out forwards';
+            el.style["-moz-animation"] = 'pathAnimation 0.1s ease-in-out forwards'
             el.style["animation-delay"] = `${delay}s`
+            el.style["-moz-animation-delay"] = `${delay}s`
             console.log(delayCounter);
         }
 
