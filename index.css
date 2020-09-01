@@ -78,7 +78,7 @@
 
 @keyframes pathAnimation {
     to {
-      stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
 }
 
@@ -105,14 +105,14 @@
 
 .birthday-msg-card {
     padding: 10px;
-    box-shadow: 5px 0px 20px -5px rgba(0,0,0,0.75);
+    box-shadow: 5px 0px 20px -5px rgba(0, 0, 0, 0.75);
 }
 
-blockquote:lang(ja) > p {
+blockquote:lang(ja)>p {
     font-family: 'Kosugi Maru', sans-serif;
 }
 
-blockquote > p {
+blockquote>p {
     font-family: 'Architects Daughter', cursive;
 }
 
@@ -125,4 +125,28 @@ blockquote > p {
 
 img#ankimo-img {
     float: right;
+}
+
+@media (max-width: 700px) {
+    .card-columns {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 700px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1000px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 1400px) {
+    .card-columns {
+        column-count: 4;
+    }
 }
