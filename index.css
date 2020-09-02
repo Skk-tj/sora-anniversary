@@ -38,6 +38,16 @@
     flex-direction: column;
 }
 
+#start-page::before {
+    content: " ";
+    background-image: url("img/Border.png");
+    background-position: top;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 h1 {
     text-align: center;
     font-family: 'Patrick Hand', cursive;
