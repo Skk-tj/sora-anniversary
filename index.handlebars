@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
         integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw=="
         crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kosugi+Maru&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
@@ -31,9 +32,8 @@
         <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
             xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-            viewBox="0 0 297 210" version="1.1" id="svg8" inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-            sodipodi:docname="Text.svg">
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 297 210" version="1.1" id="svg8"
+            inkscape:version="0.92.4 (5da689c313, 2019-01-14)" sodipodi:docname="Text.svg">
             <defs id="defs2" />
             <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0"
                 inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.49497475" inkscape:cx="677.6152"
@@ -496,15 +496,15 @@
             <div class="birthday-msg-card-container" data-aos="fade-in">
                 <div class="birthday-msg-card card card-default">
                     <div class="sender-details">
-                        <div class="country">
-                            <cite class="text-muted">From {{username}}</cite>
-                            {{#with twitter}}
-                                <cite class="text-muted">(@{{this}})</cite>
-                            {{/with}}
-                            {{#with country_code}}
-                                <span class="flag-icon flag-icon-{{this}}"></span>
-                            {{/with}}
-                            <img id="ankimo-img" src="img/sddefault_live.png" width="10%" height="10%"></img>
+                        <div class="sender-details-left">
+                            <img class="ankimo-img" src="img/sddefault_live.png"></img>
+                            {{#if country_code}}
+                            <span class="flag-icon flag-icon-{{country_code}}" title="{{country_name}}"></span>
+                            {{/if}}
+                            <cite class="sender-name text-muted">{{username}}{{#with twitter}} (@{{this}}){{/with}}</cite>
+                        </div>
+                        <div class="sender-details-right">
+                            <img class="shooting-star-img" src="img/shootingStar.png"></img>
                         </div>
                     </div>
                     <div class="birthday-msg">
@@ -680,7 +680,7 @@
             animatePath($("path")[x], delayCounter);
             delayCounter += 0.1;
         }
-        
+
     </script>
 </body>
 

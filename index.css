@@ -156,8 +156,37 @@ blockquote>p {
     flex-direction: column;
 }
 
-img#ankimo-img {
-    float: right;
+.sender-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sender-details-left {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.sender-details-left > * {
+    display: block;
+    margin-left: 15px;
+}
+
+.sender-details-left > *:first-child {
+    margin-left: unset;
+}
+
+.flag-icon {
+    font-size: 1.5rem;
+}
+
+img.ankimo-img {
+    width: 39px;
+}
+
+img.shooting-star-img {
+    width: 39px;
 }
 
 @media (max-width: 700px) {
@@ -194,7 +223,7 @@ img#ankimo-img {
 }
 
 @media (min-width: 1400px) {
-    .card-columns {
+    /* .card-columns {
         column-count: 4;
-    }
+    } */
 }

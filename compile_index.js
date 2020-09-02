@@ -19,6 +19,7 @@ const country_lookup = require('country-code-lookup');
         record => {
             let country = record[3];
             let country_code = '';
+            let country_name = '';
 
             if (country) {
                 country = country.replace("-", " ");
@@ -26,6 +27,7 @@ const country_lookup = require('country-code-lookup');
                 let lookup = country_lookup.byCountry(country);
                 if (lookup) {
                     country_code = lookup.iso2.toLowerCase();
+                    country_name = lookup.country;
                 }
             }
 
@@ -34,6 +36,7 @@ const country_lookup = require('country-code-lookup');
                 username: record[1],
                 twitter: record[2],
                 country: country,
+                country_name: country_name,
                 country_code: country_code,
                 message: record[4],
                 message_jp: record[6]
