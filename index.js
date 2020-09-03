@@ -122,12 +122,13 @@ particlesJS('particles-js', {
 
 window.onload = function () {
     let paths = $('#start-page-svg path');
+    let svg_fully_drawn_time = 0;
+    let anim_time = 0.1;
 
     document.querySelector('#start-page-svg').style.removeProperty("visibility");
     for (let i = 0; i < paths.length; ++i) {
         let path = paths[i]
         let length = path.getTotalLength();
-        let anim_time = 0.1;
 
         path.style.transition = path.style.WebkitTransition = 'none';
         // Set up the starting positions
@@ -147,5 +148,12 @@ window.onload = function () {
         // Go!
         path.style.strokeDashoffset = '0';
         path.style.strokeWidth = ori_width;
+
+        svg_fully_drawn_time = anim_time * i;
     }
+
+    let scroll_hint = document.querySelector('#scroll-arrow-hint');
+    let scroll_hint_show_time = svg_fully_drawn_time + 1;
+    scroll_hint.style.transition = scroll_hint.style.WebkitTransition = 'visibility 1s linear ' + scroll_hint_show_time + 's';
+    scroll_hint.style.visibility = "visible";
 };

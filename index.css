@@ -43,7 +43,7 @@
     flex-direction: column;
 }
 
-#start-page::before {
+#start-page-bg {
     content: " ";
     background-image: url("img/Border.png");
     background-position: top;
