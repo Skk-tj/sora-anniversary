@@ -1,7 +1,7 @@
 const message_csv_file = 'messages.csv';
 const template_file = 'index.handlebars';
-const output_file = 'index.html';
 
+const minify = require('html-minifier').minify;
 const handlebars = require('handlebars');
 const fs = require('fs').promises;
 const parse = require('csv-parse/lib/sync');
@@ -51,6 +51,23 @@ const country_lookup = require('country-code-lookup');
 
     var template = handlebars.compile(template_source);
 
-    output_html = template(template_data);
-    await fs.writeFile(output_file, output_html);
+    output_html = minify(
+        template(template_data),
+        {
+            minifyCSS: true,
+            minifyJS: true,
+            collapseBooleanAttributes: true,
+            collapseWhitespace: true,
+            collapseInlineTagWhitespace: true,
+            conservativeCollapse: true,
+            removeAttributeQuotes: true,
+            removeComments: true,
+            removeEmptyAttributes: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true
+        }
+    );
+    console.log(output_html)
 })()
