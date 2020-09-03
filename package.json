@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Webpage for Sora's 3rd Anniversary",
   "scripts": {
-    "minify_css": "npx cleancss -o index.min.css index.css",
-    "compile_js": "npx babel index.js | uglifyjs > index.min.js",
-    "compile_handlebars": "node compile_index.js > index.html",
-    "compile": "npm run minify_css && npm run compile_js && npm run compile_handlebars"
+    "build:css": "npx cleancss -o index.min.css index.css",
+    "build:js": "npx babel index.js | uglifyjs > index.min.js",
+    "build:html": "node compile_index.js > index.html",
+    "build": "npm run build:css && npm run build:js && npm run build:html",
+    "compile": "npm run build"
   },
   "repository": {
     "type": "git",

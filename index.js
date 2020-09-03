@@ -118,27 +118,34 @@ particlesJS('particles-js', {
     "retina_detect": true
 });
 
-function pathPrepare($el) {
-    var lineLength = $el.getTotalLength();
 
-    $el.style["stroke-dasharray"] = lineLength;
-    $el.style["stroke-dashoffset"] = lineLength;
-}
 
-for (let x = 0; x < 81; x++) {
-    pathPrepare($("path")[x]);
-}
+window.onload = function () {
+    let paths = $('#start-page-svg path');
 
-function animatePath(el, delay) {
-    el.style["animation"] = 'pathAnimation 0.1s ease-in-out forwards';
-    el.style["-moz-animation"] = 'pathAnimation 0.1s ease-in-out forwards'
-    el.style["animation-delay"] = `${delay}s`
-    el.style["-moz-animation-delay"] = `${delay}s`
-}
+    document.querySelector('#start-page-svg').style.removeProperty("visibility");
+    for (let i = 0; i < paths.length; ++i) {
+        let path = paths[i]
+        let length = path.getTotalLength();
+        let anim_time = 0.1;
 
-var delayCounter = 0;
+        path.style.transition = path.style.WebkitTransition = 'none';
+        // Set up the starting positions
+        path.style.strokeDasharray = length + ' ' + length;
+        path.style.strokeDashoffset = length;
 
-for (let x = 0; x < 81; x++) {
-    animatePath($("path")[x], delayCounter);
-    delayCounter += 0.1;
-}
+        let ori_width = path.style.strokeWidth;
+        path.style.strokeWidth = '0';
+
+        // Trigger a layout so styles are calculated & the browser
+        // picks up the starting position before animating
+        path.getBoundingClientRect();
+
+        // Define our transition
+        path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset ' + anim_time + 's ease-in-out ' + (anim_time * i) + 's, stroke-width ' + anim_time + 's ease ' + (anim_time * i) + 's';
+
+        // Go!
+        path.style.strokeDashoffset = '0';
+        path.style.strokeWidth = ori_width;
+    }
+};

@@ -59,7 +59,6 @@ const country_lookup = require('country-code-lookup');
             collapseBooleanAttributes: true,
             collapseWhitespace: true,
             collapseInlineTagWhitespace: true,
-            conservativeCollapse: true,
             removeAttributeQuotes: true,
             removeComments: true,
             removeEmptyAttributes: true,

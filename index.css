@@ -66,7 +66,7 @@ h4 {
     font-family: 'Patrick Hand', cursive;
 }
 
-svg {
+#start-page-svg svg {
     width: 50vw;
     height: 50vh;
 }
@@ -194,7 +194,7 @@ img.shooting-star-img {
         column-count: 1;
     }
 
-    svg {
+    #start-page-svg svg {
         width: 90vw;
         height: 50vh;
     }
@@ -205,7 +205,7 @@ img.shooting-star-img {
         column-count: 2;
     }
 
-    svg {
+    #start-page-svg svg {
         width: 80vw;
         height: 50vh;
     }
@@ -216,7 +216,7 @@ img.shooting-star-img {
         column-count: 3;
     }
 
-    svg {
+    #start-page-svg svg {
         width: 70vw;
         height: 50vh;
     }
