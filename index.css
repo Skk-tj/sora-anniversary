@@ -119,7 +119,7 @@ h4 {
 
 #drawpile-image {
     width: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
 }
 
 #audio-mix-sect {
