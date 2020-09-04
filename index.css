@@ -25,6 +25,7 @@
     justify-content: center;
     height: 20vh;
     margin-top: 20vh;
+    text-shadow: 0 0 5px #000;
 }
 
 #cover-msg {
@@ -182,17 +183,15 @@ blockquote>p {
 
 .flag-icon {
     font-size: 1.75rem;
+    box-shadow: 0 0 5px black;
 }
 
 .shooting-star-img {
     margin-left: 15px;
-}
-
-img.ankimo-img {
     width: 39px;
 }
 
-img.shooting-star-img {
+img.ankimo-img {
     width: 39px;
 }
 
