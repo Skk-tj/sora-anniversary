@@ -20,6 +20,7 @@ const countries = require("i18n-iso-countries");
             let country = record[3];
             let country_code = '';
             let country_name = '';
+            let twitter = '';
 
             if (country) {
                 country = country.replace("-", " ");
@@ -37,15 +38,15 @@ const countries = require("i18n-iso-countries");
             // if there isn't a match, then message is not in Japanese, pass this value to the handlebars file. 
             var isMsgInJP = !(jpCharacters === null)
 
-            var twitter = record[2]
+            twitter = record[2]
             if (twitter.startsWith("@")) {
                 twitter = twitter.substring(1);
             }
 
             message_row = {
                 timestamp: record[0],
-                username: record[1],
-                twitter: twitter,
+                username: record[1].trim(),
+                twitter: twitter.trim(),
                 country: country,
                 country_name: country_name,
                 country_code: country_code,
