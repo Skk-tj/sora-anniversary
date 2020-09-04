@@ -25,10 +25,10 @@ const countries = require("i18n-iso-countries");
                 country = country.replace("-", " ");
 
                 search_country_code = countries.getAlpha2Code(country, 'en');
-                if(search_country_code) {
+                if (search_country_code) {
                     country_code = search_country_code.toLowerCase();
                     country_name = countries.getName(search_country_code, "en") + ' / ' + countries.getName(search_country_code, "ja");
-                }                
+                }
             }
 
             // https://stackoverflow.com/questions/15033196/using-javascript-to-check-whether-a-string-contains-japanese-characters-includi/15034560
@@ -37,10 +37,15 @@ const countries = require("i18n-iso-countries");
             // if there isn't a match, then message is not in Japanese, pass this value to the handlebars file. 
             var isMsgInJP = !(jpCharacters === null)
 
+            var twitter = record[2]
+            if (twitter.startsWith("@")) {
+                twitter = twitter.substring(1);
+            }
+
             message_row = {
                 timestamp: record[0],
                 username: record[1],
-                twitter: record[2],
+                twitter: twitter,
                 country: country,
                 country_name: country_name,
                 country_code: country_code,

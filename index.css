@@ -163,23 +163,29 @@ blockquote>p {
     align-items: center;
 }
 
-.sender-details-left {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
+.sender-name-container {
+    flex: 1;
+    min-width: 10%;
 }
 
-.sender-details-left > * {
-    display: block;
-    margin-left: 15px;
+.sender-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-right: 2.5px;
 }
 
-.sender-details-left > *:first-child {
-    margin-left: unset;
+.twitter-name {
+    font-size: 1rem;
+    font-style: italic;
+    margin-left: 5px;
 }
 
 .flag-icon {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.shooting-star-img {
+    margin-left: 15px;
 }
 
 img.ankimo-img {
