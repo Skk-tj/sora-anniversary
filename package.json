@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Webpage for Sora's 3rd Anniversary",
   "scripts": {
-    "build:css": "npx cleancss -o index.min.css index.css",
-    "build:js": "npx babel index.js | uglifyjs > index.min.js",
+    "build:css": "npx cleancss -O2 -o index.min.css index.css",
+    "build:js": "npx babel index.js | uglifyjs -m --toplevel --warn > index.min.js",
     "build:html": "node compile_index.js > index.html",
     "build": "npm run build:css && npm run build:js && npm run build:html",
     "compile": "npm run build"

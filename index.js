@@ -121,7 +121,7 @@ particlesJS('particles-js', {
 
 
 window.onload = function () {
-    let paths = $('#start-page-svg path');
+    let paths = document.querySelectorAll('#start-page-svg path');
     let svg_fully_drawn_time = 0;
     let anim_time = 0.1;
 
