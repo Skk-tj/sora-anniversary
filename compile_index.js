@@ -39,7 +39,7 @@ const countries = require("i18n-iso-countries");
             var isMsgInJP = !(jpCharacters === null)
 
             twitter = record[2]
-            if (twitter.startsWith("@")) {
+            if (twitter.startsWith("@") || twitter.startsWith("＠")) {
                 twitter = twitter.substring(1);
             }
 
