@@ -5,7 +5,7 @@ const minify = require('html-minifier').minify;
 const handlebars = require('handlebars');
 const fs = require('fs').promises;
 const parse = require('csv-parse/lib/sync');
-const country_lookup = require('country-code-lookup');
+const countries = require("i18n-iso-countries");
 
 (async function () {
     let message_data = []
@@ -24,11 +24,11 @@ const country_lookup = require('country-code-lookup');
             if (country) {
                 country = country.replace("-", " ");
 
-                let lookup = country_lookup.byCountry(country);
-                if (lookup) {
-                    country_code = lookup.iso2.toLowerCase();
-                    country_name = lookup.country;
-                }
+                search_country_code = countries.getAlpha2Code(country, 'en');
+                if(search_country_code) {
+                    country_code = search_country_code.toLowerCase();
+                    country_name = countries.getName(search_country_code, "en") + ' / ' + countries.getName(search_country_code, "ja");
+                }                
             }
 
             // https://stackoverflow.com/questions/15033196/using-javascript-to-check-whether-a-string-contains-japanese-characters-includi/15034560
