@@ -31,6 +31,12 @@ const country_lookup = require('country-code-lookup');
                 }
             }
 
+            // https://stackoverflow.com/questions/15033196/using-javascript-to-check-whether-a-string-contains-japanese-characters-includi/15034560
+            var jpCharacters = record[4].match(/[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/);
+
+            // if there isn't a match, then message is not in Japanese, pass this value to the handlebars file. 
+            var isMsgInJP = !(jpCharacters === null)
+
             message_row = {
                 timestamp: record[0],
                 username: record[1],
@@ -39,6 +45,7 @@ const country_lookup = require('country-code-lookup');
                 country_name: country_name,
                 country_code: country_code,
                 message: record[4],
+                isMsgInJP: isMsgInJP,
                 message_jp: record[6]
             };
             message_data.push(message_row);

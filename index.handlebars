@@ -84,15 +84,19 @@
                         </div>
                     </div>
                     <div class="birthday-msg">
-                        <blockquote class="blockquote mb-0">
-                            <p>{{message}}</p>
-                        </blockquote>
-                        {{#with message_jp}}
-                        <hr>
-                        <blockquote class="blockquote mb-0" lang="ja">
-                            <p>{{this}}</p>
-                        </blockquote>
-                        {{/with}}
+                        {{#if isMsgInJP}}
+                            <blockquote class="blockquote mb-0" lang="ja">
+                                <p>{{message}}</p>
+                            </blockquote>
+                        {{else}}
+                            <blockquote class="blockquote mb-0">
+                                <p>{{message}}</p>
+                            </blockquote>
+                            <hr>
+                            <blockquote class="blockquote mb-0" lang="ja">
+                                <p>{{message_jp}}</p>
+                            </blockquote>
+                        {{/if}}
                     </div>
                 </div>
             </div>
