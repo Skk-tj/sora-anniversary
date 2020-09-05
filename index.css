@@ -240,16 +240,19 @@ img.ankimo-img {
 }
 
 @media (max-width: 700px) {
-    .birthday-msgs .card-columns {
+    #birthday-msgs .card-columns {
         column-count: 1;
     }
     #start-page-svg {
         max-width: 100%;
     }
+    #credits .card-columns {
+        column-count: 2;
+    }
 }
 
 @media (min-width: 700px) {
-    .birthday-msgs .card-columns {
+    #birthday-msgs .card-columns {
         column-count: 2;
     }
     #start-page-svg {
@@ -258,7 +261,7 @@ img.ankimo-img {
 }
 
 @media (min-width: 1000px) {
-    .birthday-msgs .card-columns {
+    #birthday-msgs .card-columns {
         column-count: 3;
     }
     #start-page-svg {
@@ -267,7 +270,7 @@ img.ankimo-img {
 }
 
 @media (min-width: 1400px) {
-    /* .card-columns {
+    #credits .card-columns {
         column-count: 4;
-    } */
+    }
 }
