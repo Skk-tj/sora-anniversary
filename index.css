@@ -236,6 +236,7 @@ img.ankimo-img {
 #start-page-svg {
     visibility: hidden;
     max-width: 620px;
+    width: 75vh;
 }
 
 @media (max-width: 700px) {
@@ -259,6 +260,9 @@ img.ankimo-img {
 @media (min-width: 1000px) {
     .birthday-msgs .card-columns {
         column-count: 3;
+    }
+    #start-page-svg {
+        max-width: 75vh;
     }
 }
 
