@@ -124,7 +124,7 @@ window.onload = function () {
     let svg_fully_drawn_time = 0;
     let anim_time = 0.1;
 
-    document.querySelector('#start-page-svg').style.removeProperty("visibility");
+    document.querySelector('#start-page-svg').style.visibility = 'visible';
     for (let i = 0; i < paths.length; ++i) {
         let path = paths[i]
         let length = path.getTotalLength();
@@ -151,8 +151,13 @@ window.onload = function () {
         svg_fully_drawn_time = anim_time * i;
     }
 
+    let en_msg = document.querySelector("#start-msg-en")
+    en_msg.style.transitionDelay = svg_fully_drawn_time + 's';
+    en_msg.style.transform = 'translateZ(0)';
+    en_msg.style.opacity = 1;
+
     let scroll_hint = document.querySelector('#scroll-arrow-hint');
     let scroll_hint_show_time = svg_fully_drawn_time + 1;
-    scroll_hint.style.transition = scroll_hint.style.WebkitTransition = 'visibility 1s linear ' + scroll_hint_show_time + 's';
-    scroll_hint.style.visibility = "visible";
+    scroll_hint.style.transition = scroll_hint.style.WebkitTransition = 'opacity 1s linear ' + scroll_hint_show_time + 's';
+    scroll_hint.style.opacity = 1;
 };
