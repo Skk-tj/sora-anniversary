@@ -39,6 +39,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: white;
 }
 
 #start-page-bg {
@@ -65,8 +66,7 @@ h4 {
 }
 
 #start-page-svg svg {
-    width: 50vw;
-    height: 50vh;
+    width: 100%;
 }
 
 #scroll-arrow-hint {
@@ -206,8 +206,9 @@ img.ankimo-img {
     background-color: black;
     color: white;
     font-family: 'Patrick Hand', cursive;
-    /* width: 100vh; */
     padding: 15px;
+    z-index: 2;
+    position: relative;
 }
 
 #credits .card-columns {
@@ -222,14 +223,16 @@ img.ankimo-img {
     margin-bottom: 0;
 }
 
+#start-page-svg {
+    max-width: 620px;
+}
+
 @media (max-width: 700px) {
     .birthday-msgs .card-columns {
         column-count: 1;
     }
-
-    #start-page-svg svg {
-        width: 90vw;
-        height: 50vh;
+    #start-page-svg {
+        max-width: 100%;
     }
 }
 
@@ -237,21 +240,14 @@ img.ankimo-img {
     .birthday-msgs .card-columns {
         column-count: 2;
     }
-
-    #start-page-svg svg {
-        width: 80vw;
-        height: 50vh;
+    #start-page-svg {
+        max-width: 620px;
     }
 }
 
 @media (min-width: 1000px) {
     .birthday-msgs .card-columns {
         column-count: 3;
-    }
-
-    #start-page-svg svg {
-        width: 70vw;
-        height: 50vh;
     }
 }
 
