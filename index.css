@@ -184,18 +184,21 @@ blockquote>p {
 .sender-name-container {
     flex: 1;
     min-width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 
 .sender-name {
     font-size: 1.5rem;
     font-weight: bold;
-    padding-right: 2.5px;
+    white-space: nowrap;
 }
 
 .twitter-name {
     font-size: 1rem;
     font-style: italic;
-    margin-left: 5px;
+    white-space: nowrap;
 }
 
 .flag-icon {
