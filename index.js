@@ -4,7 +4,6 @@ AOS.init({
     duration: 1000,
     mirror: true,
     once: false,
-    anchorPlacement: 'top-center'
 });
 
 particlesJS('particles-js', {

@@ -28,10 +28,6 @@
     text-shadow: 0 0 5px #000;
 }
 
-#cover-msg {
-    color: white;
-}
-
 .full-screen-page {
     width: 100%;
     height: 100vh;
@@ -152,10 +148,21 @@ blockquote>p {
 }
 
 #end-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    height: 150vh;
+}
+
+#end-page-filler {
+    height: 15vh;
+}
+
+#final-msg-container {
+    position: fixed;
+    width: 100%;
+    top: 50vh;
+}
+
+#final-msg {
+    color: white;
 }
 
 .sender-details {
@@ -195,8 +202,20 @@ img.ankimo-img {
     width: 39px;
 }
 
+#credits {
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+    /* width: 100vh; */
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#credits p {
+    margin-bottom: 0;
+}
+
 @media (max-width: 700px) {
-    .card-columns {
+    .birthday-msgs .card-columns {
         column-count: 1;
     }
 
@@ -207,7 +226,7 @@ img.ankimo-img {
 }
 
 @media (min-width: 700px) {
-    .card-columns {
+    .birthday-msgs .card-columns {
         column-count: 2;
     }
 
@@ -218,7 +237,7 @@ img.ankimo-img {
 }
 
 @media (min-width: 1000px) {
-    .card-columns {
+    .birthday-msgs .card-columns {
         column-count: 3;
     }
 
@@ -232,4 +251,13 @@ img.ankimo-img {
     /* .card-columns {
         column-count: 4;
     } */
+}
+
+#credits .card-columns {
+    column-count: 3;
+    background-color: black;
+}
+
+#credits .card {
+    background-color: unset;
 }
