@@ -193,12 +193,16 @@ blockquote>p {
     font-size: 1.5rem;
     font-weight: bold;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .twitter-name {
     font-size: 1rem;
     font-style: italic;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .flag-icon {
