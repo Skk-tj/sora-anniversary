@@ -123,9 +123,16 @@ h4 {
     }
 }
 
+#drawpile-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 #drawpile-image {
     width: 100%;
     object-fit: scale-down;
+    max-width: 1400px;
 }
 
 #cover-mix-player-container {
