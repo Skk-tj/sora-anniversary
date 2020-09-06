@@ -55,8 +55,8 @@
 
 #start-msg-en {
     opacity: 0;
-    transform: translate3d(0,100px,0);
-    transition-property: opacity,transform;
+    transform: translate3d(0, 100px, 0);
+    transition-property: opacity, transform;
     transition-duration: 1s;
     transition-timing-function: ease;
 }
@@ -128,12 +128,30 @@ h4 {
     object-fit: scale-down;
 }
 
-#audio-mix-sect {
-    margin: 20px;
+#cover-mix-player-container {
+    display: flex;
+    justify-content: center;
 }
 
-#audio-mix-player-container {
-    padding: 5px;
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #birthday-msgs {
