@@ -167,12 +167,22 @@ blockquote>p {
 
 #final-msg-container {
     position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
     width: 100%;
-    top: 50vh;
 }
 
 #final-msg {
     color: white;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    text-shadow: 0 0 5px #000;
+}
+
+#final-msg *:lang(ja) {
+    font-family: 'Kosugi Maru', sans-serif;
 }
 
 .sender-details {
@@ -224,7 +234,6 @@ img.ankimo-img {
     color: white;
     font-family: 'Patrick Hand', cursive;
     padding: 15px;
-    z-index: 2;
     position: relative;
 }
 
