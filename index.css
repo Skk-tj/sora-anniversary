@@ -234,11 +234,11 @@ img.ankimo-img {
     color: white;
     font-family: 'Patrick Hand', cursive;
     padding: 15px;
-    position: relative;
 }
 
 #credits .card-columns {
     column-count: 3;
+    transform: translateZ(0);
 }
 
 #credits .card {
